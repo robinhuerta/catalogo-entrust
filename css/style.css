@@ -926,6 +926,13 @@ input {
   color: var(--color-primary);
 }
 
+.brand-card__desc {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 /* ========================================
    PAYMENT
    ======================================== */
