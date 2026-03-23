@@ -876,6 +876,41 @@ input {
   text-decoration: line-through;
 }
 
+/* Gallery */
+.product-card__image {
+  position: relative;
+}
+
+.gallery-img {
+  display: none;
+}
+
+.gallery-img--active {
+  display: block;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 0 2px;
+}
+
+.gallery-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gray-300, #ccc);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.gallery-dot--active {
+  background: var(--color-primary);
+}
+
 .products__cta {
   text-align: center;
   margin-top: var(--space-2xl);

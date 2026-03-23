@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCart();
   initSearch();
+  initProductGalleries();
 });
 
 // ========================================
@@ -417,4 +418,24 @@ function initSearch() {
       }
     });
   }
+}
+
+
+// ========================================
+// PRODUCT GALLERY
+// ========================================
+function initProductGalleries() {
+  document.querySelectorAll('.product-card__image').forEach(container => {
+    const imgs = container.querySelectorAll('.gallery-img');
+    const dots = container.querySelectorAll('.gallery-dot');
+    if (!imgs.length) return;
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        imgs.forEach(img => img.classList.remove('gallery-img--active'));
+        dots.forEach(d => d.classList.remove('gallery-dot--active'));
+        imgs[i].classList.add('gallery-img--active');
+        dot.classList.add('gallery-dot--active');
+      });
+    });
+  });
 }
