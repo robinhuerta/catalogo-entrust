@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initBackToTop();
   initScrollAnimations();
-  initProductButtons();
+  initCart();
   initSearch();
 });
 
@@ -198,20 +198,178 @@ function initScrollAnimations() {
 }
 
 // ========================================
-// PRODUCT BUTTONS — WHATSAPP
+// CART
 // ========================================
-function initProductButtons() {
-  const phone = '51930404573';
+let cart = JSON.parse(localStorage.getItem('entrust-cart') || '[]');
 
-  document.querySelectorAll('.btn--outline[data-product]').forEach(btn => {
+function initCart() {
+  document.getElementById('cartBtn')?.addEventListener('click', openCart);
+  document.getElementById('cartOverlay')?.addEventListener('click', closeCart);
+  document.getElementById('cartClose')?.addEventListener('click', closeCart);
+  document.getElementById('cartClear')?.addEventListener('click', clearCart);
+  document.getElementById('cartCheckout')?.addEventListener('click', checkoutWhatsApp);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeCart();
+  });
+
+  document.getElementById('cartEmptyLink')?.addEventListener('click', closeCart);
+
+  // Cart item actions via event delegation
+  document.getElementById('cartItems')?.addEventListener('click', e => {
+    const btn = e.target.closest('[data-action]');
+    if (!btn) return;
+    const key = btn.dataset.key;
+    const action = btn.dataset.action;
+    if (action === 'minus') cartUpdateQty(key, -1);
+    else if (action === 'plus') cartUpdateQty(key, 1);
+    else if (action === 'remove') cartRemove(key);
+  });
+
+  // Add to cart buttons
+  document.querySelectorAll('.btn--add-cart').forEach(btn => {
     btn.addEventListener('click', () => {
-      const product = btn.dataset.product;
-      const brand = btn.dataset.brand;
-      const price = btn.dataset.price;
-      const msg = `Hola! Me interesa el siguiente producto:\n*${brand} - ${product}*\nPrecio: ${price}\n¿Está disponible?`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+      const { product, brand, price } = btn.dataset;
+      const imgEl = btn.closest('.product-card')?.querySelector('.product-card__img');
+      const imgSrc = imgEl?.getAttribute('src') || '';
+      addToCart(product, brand, price, imgSrc, btn);
     });
   });
+
+  updateCartUI();
+}
+
+function openCart() {
+  document.getElementById('cartDrawer')?.classList.add('open');
+  document.getElementById('cartOverlay')?.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cartDrawer')?.classList.remove('open');
+  document.getElementById('cartOverlay')?.classList.remove('visible');
+  document.body.style.overflow = '';
+}
+
+function addToCart(product, brand, price, imgSrc, btn) {
+  const key = `${brand}||${product}`;
+  const existing = cart.find(i => i.key === key);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ key, product, brand, price, imgSrc, qty: 1 });
+  }
+  saveCart();
+  updateCartUI();
+  openCart();
+
+  if (btn) {
+    const prev = btn.innerHTML;
+    btn.innerHTML = '✓ Agregado';
+    btn.classList.add('btn--added');
+    setTimeout(() => {
+      btn.innerHTML = prev;
+      btn.classList.remove('btn--added');
+    }, 1200);
+  }
+}
+
+function cartRemove(key) {
+  cart = cart.filter(i => i.key !== key);
+  saveCart();
+  updateCartUI();
+}
+
+function cartUpdateQty(key, delta) {
+  const item = cart.find(i => i.key === key);
+  if (!item) return;
+  item.qty = Math.max(0, item.qty + delta);
+  if (item.qty === 0) cartRemove(key);
+  else { saveCart(); updateCartUI(); }
+}
+
+function clearCart() {
+  if (!cart.length) return;
+  cart = [];
+  saveCart();
+  updateCartUI();
+}
+
+function saveCart() {
+  localStorage.setItem('entrust-cart', JSON.stringify(cart));
+}
+
+function getCartTotal() {
+  return cart.reduce((sum, item) => {
+    const num = parseFloat(item.price.replace(/[^\d.]/g, ''));
+    return sum + (isNaN(num) ? 0 : num * item.qty);
+  }, 0);
+}
+
+function updateCartUI() {
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+
+  document.querySelectorAll('.cart-count').forEach(el => {
+    el.textContent = count;
+    el.style.display = count > 0 ? 'flex' : 'none';
+  });
+
+  const dc = document.getElementById('cartDrawerCount');
+  if (dc) dc.textContent = count > 0 ? `(${count})` : '';
+
+  renderCartItems();
+
+  const totalEl = document.getElementById('cartSubtotal');
+  if (totalEl) totalEl.textContent = `S/. ${getCartTotal().toFixed(2)}`;
+
+  const isEmpty = cart.length === 0;
+  const emptyEl = document.getElementById('cartEmpty');
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+  if (emptyEl) emptyEl.style.display = isEmpty ? 'flex' : 'none';
+  if (itemsEl) itemsEl.style.display = isEmpty ? 'none' : 'flex';
+  if (footerEl) footerEl.style.display = isEmpty ? 'none' : 'flex';
+}
+
+function renderCartItems() {
+  const container = document.getElementById('cartItems');
+  if (!container) return;
+
+  container.innerHTML = cart.map(item => {
+    const safeKey = item.key.replace(/"/g, '&quot;');
+    return `
+    <div class="cart-item">
+      <div class="cart-item__img-wrap">
+        <img src="${item.imgSrc}" alt="${item.product}" class="cart-item__img" onerror="this.style.display='none'">
+      </div>
+      <div class="cart-item__info">
+        <span class="cart-item__brand">${item.brand}</span>
+        <p class="cart-item__name">${item.product}</p>
+        <span class="cart-item__price">${item.price}</span>
+      </div>
+      <div class="cart-item__right">
+        <div class="cart-item__qty">
+          <button class="qty-btn" data-action="minus" data-key="${safeKey}">−</button>
+          <span class="qty-value">${item.qty}</span>
+          <button class="qty-btn" data-action="plus" data-key="${safeKey}">+</button>
+        </div>
+        <button class="cart-item__remove" data-action="remove" data-key="${safeKey}" aria-label="Eliminar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function checkoutWhatsApp() {
+  if (!cart.length) return;
+  const phone = '51930404573';
+  let msg = '🛒 *Pedido Entrust*\n\n';
+  cart.forEach((item, i) => {
+    msg += `${i + 1}. *${item.brand} - ${item.product}*\n   ${item.price} × ${item.qty} unid.\n\n`;
+  });
+  msg += `*TOTAL ESTIMADO: S/. ${getCartTotal().toFixed(2)}*\n\n¿Pueden confirmar disponibilidad y coordinar envío? ¡Gracias!`;
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 // ========================================
