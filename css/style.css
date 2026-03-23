@@ -334,6 +334,7 @@ input {
 /* Logo Image */
 .logo-img {
   height: 32px;
+  max-width: 140px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -355,7 +356,8 @@ input {
 
 .header__logo {
   flex-shrink: 0;
-  gap: 2px;
+  gap: 4px;
+  max-width: 160px;
 }
 
 .logo-tagline-text {
