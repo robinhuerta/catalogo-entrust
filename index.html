@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrust – Moda Deportiva por Catálogo</title>
+  <meta name="description" content="Entrust - Tu tienda de moda deportiva por catálogo. Zapatillas, ropa deportiva y accesorios de las mejores marcas.">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ========== TOP BAR ========== -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <span class="top-bar__slogan">Ingeniería Textil & Gorras Premium</span>
+      <div class="top-bar__right">
+        <a href="#nosotros" class="top-bar__link">Nosotros</a>
+        <a href="#contacto" class="top-bar__link">Contacto</a>
+        <div class="top-bar__socials">
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <img src="https://i.postimg.cc/x8G1cg84/entrust.png" alt="Entrust" class="logo-img">
+        <span class="logo-tagline-text">Ingeniería Textil & Gorras Premium</span>
+      </a>
+
+      <button class="header__hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header__nav" id="mainNav">
+        <a href="#hombre" class="nav-link">Hombre</a>
+        <a href="#mujer" class="nav-link">Mujer</a>
+        <a href="#ninos" class="nav-link">Niños</a>
+        <a href="#marcas" class="nav-link">Marcas</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/51930404573?text=Hola!%20Quisiera%20recibir%20el%20cat%C3%A1logo%20de%20productos%20Entrust" class="action-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          Catálogos
+        </a>
+        <a href="#hombre" class="action-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          Tienda
+        </a>
+        <a href="https://wa.me/51930404573?text=Hola!%20Quisiera%20informaci%C3%B3n%20sobre%20mi%20pedido" class="action-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Mi cuenta
+        </a>
+        <a href="#hombre" class="action-link cart-link" id="cartLink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+
+        <div class="header__search">
+          <input type="text" placeholder="Buscar" class="search-input" id="searchInput">
+          <button class="search-btn" id="searchBtn" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__slider" id="heroSlider">
+      <div class="hero__slide active" style="background-image: url('/images/hero-banner-1.png')">
+        <div class="hero__overlay">
+          <div class="container hero__content">
+            <span class="hero__badge">NUEVO</span>
+            <h1 class="hero__title">PACK HOMBRE</h1>
+            <p class="hero__subtitle">1 Zapatilla + Accesorio</p>
+            <div class="hero__price">S/. 139</div>
+            <a href="#hombre" class="btn btn--primary">Ver Ofertas</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image: url('/images/hero-banner-2.png')">
+        <div class="hero__overlay">
+          <div class="container hero__content">
+            <span class="hero__badge">COLECCIÓN</span>
+            <h1 class="hero__title">MUJER DEPORTIVA</h1>
+            <p class="hero__subtitle">Nueva temporada de ropa y zapatillas</p>
+            <div class="hero__price">Desde S/. 89</div>
+            <a href="#mujer" class="btn btn--primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__slide" style="background-image: url('/images/hero-banner-3.png')">
+        <div class="hero__overlay">
+          <div class="container hero__content">
+            <span class="hero__badge">NIÑOS</span>
+            <h1 class="hero__title">PACK NIÑOS</h1>
+            <p class="hero__subtitle">Zapatillas y accesorios para los más pequeños</p>
+            <div class="hero__price">S/. 99</div>
+            <a href="#ninos" class="btn btn--primary">Comprar Ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__controls">
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="hero__dots" id="heroDots">
+        <button class="hero__dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="hero__dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="hero__dot" data-index="2" aria-label="Slide 3"></button>
+      </div>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== CATEGORÍAS ========== -->
+  <section class="categories" id="categorias">
+    <div class="container">
+      <h2 class="section-title">¿Para quién buscas?</h2>
+      <div class="categories__grid categories__grid--3">
+        <a href="#hombre" class="category-card" id="categoryHombre">
+          <div class="category-card__image">
+            <img src="/images/categories/hombre.jpg" alt="Hombre" class="category-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="category-card__placeholder category-card__placeholder--hombre">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="80" height="80" opacity="0.3"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+          </div>
+          <h3 class="category-card__title">Hombre</h3>
+        </a>
+        <a href="#mujer" class="category-card" id="categoryMujer">
+          <div class="category-card__image">
+            <img src="/images/categories/mujer.jpg" alt="Mujer" class="category-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="category-card__placeholder category-card__placeholder--mujer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="80" height="80" opacity="0.3"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+          </div>
+          <h3 class="category-card__title">Mujer</h3>
+        </a>
+        <a href="#ninos" class="category-card" id="categoryNinos">
+          <div class="category-card__image">
+            <img src="/images/categories/ninos.jpg" alt="Niños" class="category-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="category-card__placeholder category-card__placeholder--ninos">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="80" height="80" opacity="0.3"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+          </div>
+          <h3 class="category-card__title">Niños</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ZAPATILLAS / HOMBRE ========== -->
+  <section class="products" id="hombre">
+    <div class="container">
+      <h2 class="section-title">Zapatillas</h2>
+      <div class="products__grid">
+
+        <div class="product-card" id="product1">
+          <div class="product-card__badge">NEW</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-01.jpg" alt="New Balance 574 Classic Men's" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #1a1a2e, #16213e); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">574 Classic Men's</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 389.00</span>
+            <span class="product-card__price">S/. 299.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="574 Classic Men's" data-brand="New Balance" data-price="S/. 299.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product2">
+          <div class="product-card__image">
+            <img src="/images/products/producto-02.jpg" alt="New Balance 530 Retro Running" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #2d3436, #636e72); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">530 Retro Running</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 349.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="530 Retro Running" data-brand="New Balance" data-price="S/. 349.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product3">
+          <div class="product-card__badge">-20%</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-03.jpg" alt="CAT Intruder Urban" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #0c0c0c, #333); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">CAT</span>
+          <h3 class="product-card__name">Intruder Urban</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 329.00</span>
+            <span class="product-card__price">S/. 259.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Intruder Urban" data-brand="CAT" data-price="S/. 259.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product4">
+          <div class="product-card__image">
+            <img src="/images/products/producto-04.jpg" alt="Puma RS-X Reinvention" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #1e3c72, #2a5298); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">RS-X Reinvention</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 379.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="RS-X Reinvention" data-brand="Puma" data-price="S/. 379.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product5">
+          <div class="product-card__badge">HOT</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-05.jpg" alt="New Balance Fresh Foam Roav" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #2c3e50, #4ca1af); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">Fresh Foam Roav</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 419.00</span>
+            <span class="product-card__price">S/. 319.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Fresh Foam Roav" data-brand="New Balance" data-price="S/. 319.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product6">
+          <div class="product-card__image">
+            <img src="/images/products/producto-06.jpg" alt="CAT Colorado 2.0" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #373b44, #4286f4); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">CAT</span>
+          <h3 class="product-card__name">Colorado 2.0</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 289.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Colorado 2.0" data-brand="CAT" data-price="S/. 289.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product7">
+          <div class="product-card__image">
+            <img src="/images/products/producto-07.jpg" alt="Puma Suede Classic XXI" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #141e30, #243b55); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">Suede Classic XXI</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 269.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Suede Classic XXI" data-brand="Puma" data-price="S/. 269.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product8">
+          <div class="product-card__badge">SALE</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-08.jpg" alt="New Balance 327 Urban Retro" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #0f2027, #203a43); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">SNEAKER</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">327 Urban Retro</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 359.00</span>
+            <span class="product-card__price">S/. 279.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="327 Urban Retro" data-brand="New Balance" data-price="S/. 279.00">Ver Detalle</button>
+        </div>
+
+      </div>
+      <div class="products__cta">
+        <a href="#mujer" class="btn btn--primary btn--lg">Ver Todo en Zapatillas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ROPA DEPORTIVA / MUJER ========== -->
+  <section class="products products--alt" id="mujer">
+    <div class="container">
+      <h2 class="section-title">Ropa Deportiva</h2>
+      <div class="products__grid">
+
+        <div class="product-card" id="product9">
+          <div class="product-card__badge">NEW</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-09.jpg" alt="Puma Buzo Track Jacket" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #232526, #414345); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">ROPA</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">Buzo Track Jacket</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 199.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Buzo Track Jacket" data-brand="Puma" data-price="S/. 199.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product10">
+          <div class="product-card__image">
+            <img src="/images/products/producto-10.jpg" alt="Puma Polo Deportivo ESS" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #1a1a2e, #e94560); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">ROPA</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">Polo Deportivo ESS</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 89.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Polo Deportivo ESS" data-brand="Puma" data-price="S/. 89.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product11">
+          <div class="product-card__badge">-15%</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-11.jpg" alt="New Balance Pantalón Jogger Sport" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #0f0c29, #302b63); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">ROPA</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">Pantalón Jogger Sport</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 179.00</span>
+            <span class="product-card__price">S/. 149.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Pantalón Jogger Sport" data-brand="New Balance" data-price="S/. 149.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product12">
+          <div class="product-card__image">
+            <img src="/images/products/producto-12.jpg" alt="CAT Casaca Outdoor Pro" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #200122, #6f0000); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">ROPA</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">CAT</span>
+          <h3 class="product-card__name">Casaca Outdoor Pro</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 259.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Casaca Outdoor Pro" data-brand="CAT" data-price="S/. 259.00">Ver Detalle</button>
+        </div>
+
+      </div>
+      <div class="products__cta">
+        <a href="#ninos" class="btn btn--primary btn--lg">Ver Toda la Ropa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NIÑOS ========== -->
+  <section class="products" id="ninos">
+    <div class="container">
+      <h2 class="section-title">Niños</h2>
+      <div class="products__grid">
+
+        <div class="product-card" id="product13">
+          <div class="product-card__badge">NEW</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-13.jpg" alt="New Balance 570 Bungee Kids" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #f7971e, #ffd200); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(0,0,0,0.2)" font-size="12">KIDS</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">570 Bungee Kids</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 189.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="570 Bungee Kids" data-brand="New Balance" data-price="S/. 189.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product14">
+          <div class="product-card__badge">-10%</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-14.jpg" alt="Puma Smash v2 Kids" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #43b89c, #228b7e); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">KIDS</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">Smash v2 Kids</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 179.00</span>
+            <span class="product-card__price">S/. 159.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Smash v2 Kids" data-brand="Puma" data-price="S/. 159.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product15">
+          <div class="product-card__image">
+            <img src="/images/products/producto-15.jpg" alt="New Balance Fresh Foam Kids" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #ee9ca7, #ffdde1); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(0,0,0,0.2)" font-size="12">KIDS</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">New Balance</span>
+          <h3 class="product-card__name">Fresh Foam Kids</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price">S/. 199.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Fresh Foam Kids" data-brand="New Balance" data-price="S/. 199.00">Ver Detalle</button>
+        </div>
+
+        <div class="product-card" id="product16">
+          <div class="product-card__badge">HOT</div>
+          <div class="product-card__image">
+            <img src="/images/products/producto-16.jpg" alt="Puma Anzarun Lite Kids" class="product-card__img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-card__placeholder" style="background: linear-gradient(135deg, #4776e6, #8e54e9); display:none;">
+              <svg viewBox="0 0 100 60" width="100" height="60"><text x="50" y="35" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="12">KIDS</text></svg>
+            </div>
+          </div>
+          <span class="product-card__brand">Puma</span>
+          <h3 class="product-card__name">Anzarun Lite Kids</h3>
+          <div class="product-card__prices">
+            <span class="product-card__price-old">S/. 199.00</span>
+            <span class="product-card__price">S/. 169.00</span>
+          </div>
+          <button class="btn btn--sm btn--outline" data-product="Anzarun Lite Kids" data-brand="Puma" data-price="S/. 169.00">Ver Detalle</button>
+        </div>
+
+      </div>
+      <div class="products__cta">
+        <a href="https://wa.me/51930404573?text=Hola!%20Quisiera%20ver%20m%C3%A1s%20productos%20para%20ni%C3%B1os" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Ver Todo Niños</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MARCAS ========== -->
+  <section class="brands" id="marcas">
+    <div class="container">
+      <h2 class="section-title">Marcas que Representamos</h2>
+      <div class="brands__grid">
+        <div class="brand-card" id="brandNewBalance">
+          <div class="brand-card__logo">
+            <span class="brand-card__text">NEW BALANCE</span>
+          </div>
+        </div>
+        <div class="brand-card" id="brandCat">
+          <div class="brand-card__logo">
+            <span class="brand-card__text">CAT</span>
+          </div>
+        </div>
+        <div class="brand-card" id="brandPuma">
+          <div class="brand-card__logo">
+            <span class="brand-card__text">PUMA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MÉTODOS DE PAGO ========== -->
+  <section class="payment" id="pagos">
+    <div class="container">
+      <h2 class="section-title">Métodos de Pago</h2>
+      <div class="payment__grid">
+        <div class="payment-card">
+          <div class="payment-card__icon">
+            <svg viewBox="0 0 48 32" width="48" height="32"><rect width="48" height="32" rx="4" fill="#1A1F71"/><text x="24" y="20" text-anchor="middle" fill="white" font-size="10" font-weight="bold">VISA</text></svg>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon">
+            <svg viewBox="0 0 48 32" width="48" height="32"><rect width="48" height="32" rx="4" fill="#EB001B"/><circle cx="18" cy="16" r="10" fill="#EB001B"/><circle cx="30" cy="16" r="10" fill="#F79E1B"/><path d="M24 8.5a10 10 0 010 15" fill="#FF5F00"/></svg>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--text">
+            <span style="color: #6C2EB9; font-weight: 800; font-size: 16px;">Yape</span>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--text">
+            <span style="color: #00D1AE; font-weight: 800; font-size: 16px;">Plin</span>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--text">
+            <span style="color: #003087; font-weight: 800; font-size: 14px;">Transferencia</span>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--text">
+            <span style="color: #333; font-weight: 800; font-size: 14px;">Efectivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOSOTROS ========== -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <h2 class="section-title">Nosotros</h2>
+      <div class="about__grid">
+        <div class="about__card">
+          <div class="about__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="about__title">Calidad Garantizada</h3>
+          <p class="about__text">Trabajamos con las mejores marcas del mercado. Cada producto pasa por un riguroso control de calidad antes de llegar a tus manos.</p>
+        </div>
+        <div class="about__card">
+          <div class="about__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <h3 class="about__title">Venta por Catálogo</h3>
+          <p class="about__text">Somos especialistas en venta por catálogo. Encuentra nuestros productos desde la comodidad de tu hogar con la mejor atención personalizada.</p>
+        </div>
+        <div class="about__card">
+          <div class="about__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="40" height="40"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3 class="about__title">Delivery a Todo el País</h3>
+          <p class="about__text">Enviamos a cualquier parte del Perú. Recibe tus zapatillas, ropa deportiva y accesorios directamente en tu puerta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="contacto">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <img src="https://i.postimg.cc/x8G1cg84/entrust.png" alt="Entrust" class="logo-img logo-img--footer">
+          <span class="logo-tagline-text logo-tagline-text--white">Ingeniería Textil & Gorras Premium</span>
+        </div>
+        <ul class="footer__links">
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Servicio al Cliente</h4>
+        <ul class="footer__links">
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Métodos de Envío</a></li>
+          <li><a href="#">Seguimiento de Pedido</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Mi Cuenta</h4>
+        <ul class="footer__links">
+          <li><a href="#">Registrarse</a></li>
+          <li><a href="#">Iniciar Sesión</a></li>
+          <li><a href="#">Lista de Deseos</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__col--cta">
+        <a href="https://wa.me/51930404573" class="btn btn--primary btn--lg" target="_blank" rel="noopener">CONTÁCTANOS</a>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook" class="social-icon social-icon--light">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon social-icon--light">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-icon social-icon--light">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon social-icon--light">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Entrust. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/51930404573" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
