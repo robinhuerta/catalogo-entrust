@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCart();
   initSearch();
   initProductGalleries();
+  initProductModal();
 });
 
 // ========================================
@@ -438,4 +439,99 @@ function initProductGalleries() {
       });
     });
   });
+}
+
+
+// ========================================
+// PRODUCT MODAL
+// ========================================
+function initProductModal() {
+  const modal = document.getElementById('productModal');
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('modalClose');
+  const mainImg = document.getElementById('modalMainImg');
+  const thumbsWrap = document.getElementById('modalThumbs');
+  const brandEl = document.getElementById('modalBrand');
+  const nameEl = document.getElementById('modalName');
+  const materialsEl = document.getElementById('modalMaterials');
+  const priceWrap = document.getElementById('modalPriceWrap');
+  const cartBtn = document.getElementById('modalCartBtn');
+
+  function openModal(card, clickedImgSrc) {
+    const imgs = Array.from(card.querySelectorAll('.gallery-img'));
+    const sources = imgs.length
+      ? imgs.map(img => ({ src: img.src, alt: img.alt }))
+      : [{ src: card.querySelector('.product-card__img').src, alt: '' }];
+
+    const brand = card.querySelector('.product-card__brand')?.textContent || '';
+    const name = card.querySelector('.product-card__name')?.textContent || '';
+    const materials = card.dataset.materials || '';
+    const price = card.querySelector('.product-card__price')?.textContent || '';
+    const priceOld = card.querySelector('.product-card__price-old')?.textContent || '';
+    const addCartBtn = card.querySelector('.btn--add-cart');
+
+    brandEl.textContent = brand;
+    nameEl.textContent = name;
+    materialsEl.textContent = materials;
+    priceWrap.innerHTML = (priceOld ? `<span class="product-modal__price-old">${priceOld}</span>` : '') +
+      `<span class="product-modal__price">${price}</span>`;
+
+    cartBtn.dataset.product = addCartBtn?.dataset.product || name;
+    cartBtn.dataset.brand = addCartBtn?.dataset.brand || brand;
+    cartBtn.dataset.price = addCartBtn?.dataset.price || price;
+
+    let startIndex = 0;
+    thumbsWrap.innerHTML = '';
+    sources.forEach((s, i) => {
+      const thumb = document.createElement('img');
+      thumb.src = s.src;
+      thumb.alt = s.alt;
+      thumb.className = 'product-modal__thumb';
+      thumb.addEventListener('click', () => setActive(i, sources));
+      thumbsWrap.appendChild(thumb);
+      if (s.src === clickedImgSrc) startIndex = i;
+    });
+
+    setActive(startIndex, sources);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function setActive(index, sources) {
+    mainImg.src = sources[index].src;
+    mainImg.alt = sources[index].alt;
+    thumbsWrap.querySelectorAll('.product-modal__thumb').forEach((t, i) => {
+      t.classList.toggle('product-modal__thumb--active', i === index);
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.product-card__image').forEach(container => {
+    container.addEventListener('click', e => {
+      if (e.target.closest('.gallery-dot')) return;
+      const card = container.closest('.product-card');
+      const activeImg = container.querySelector('.gallery-img--active') || container.querySelector('.product-card__img');
+      openModal(card, activeImg?.src || '');
+    });
+  });
+
+  cartBtn.addEventListener('click', () => {
+    const fakeBtn = document.createElement('button');
+    fakeBtn.dataset.product = cartBtn.dataset.product;
+    fakeBtn.dataset.brand = cartBtn.dataset.brand;
+    fakeBtn.dataset.price = cartBtn.dataset.price;
+    fakeBtn.classList.add('btn--add-cart');
+    document.body.appendChild(fakeBtn);
+    fakeBtn.click();
+    document.body.removeChild(fakeBtn);
+    closeModal();
+  });
+
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 }
